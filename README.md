@@ -1,1 +1,1 @@
-# Unsupervised_Manifold_Alignment
+# Unsupervised Manifold Alignment
