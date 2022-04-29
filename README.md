@@ -13,4 +13,4 @@ To reproduce the results obtained for the PBMC data, the following scripts can b
 2) The ```TopoGAN_First_Generation.py``` script aligns the source and target manifolds using 20 different GAN models, and calculates the average topological loss of each model to select the final model with the lowest value. 
 3) The ```TopoGAN_Second_Generation.py``` script trains the final model for an additional 1000 epochs to provide the final alignment, and evaluates the alignment using the celltype-matching and Subcelltype-matching scores.
 
-For citation and further information please refer to: "TopoGAN: Unsupervised manifold alignment of single-cell data", [bioRxiv2022](https://www.biorxiv.org/)
+For citation and further information please refer to: "TopoGAN: Unsupervised manifold alignment of single-cell data", [bioRxiv2022](https://www.biorxiv.org/content/10.1101/2022.04.27.489829v1)
