@@ -1,4 +1,0 @@
-Model,k,Percentage sub cell_type matches,Percentage cell type matches,Label transfer accuracy,Sub Label transfer accuracy,Silhouette score
-UnionCom,5,11.7971943,48.13873854,48.12769248,12.07334585,0.074221785
-UnionCom,50,12.76924776,49.81773998,49.78460179,12.78029383,0.074221785
-UnionCom,100,13.10062963,50.65724069,50.64619463,13.11167569,0.074221785
