@@ -5,7 +5,6 @@ import numpy as np
 import torch
 import random
 from torch import nn, optim
-import tensorflow as tf
 from torch.utils.data import Dataset, DataLoader, ConcatDataset
 from torch.autograd.variable import Variable
 from src.topology import PersistentHomologyCalculation
