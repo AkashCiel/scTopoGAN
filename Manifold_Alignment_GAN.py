@@ -140,11 +140,11 @@ def train_generator(optimizer, discriminator, fake_data):
     # Return error
     return error
 
-def train(generator, discriminator, batch_size, source_tech, target_tech, num_epochs, learning_rate,
-          checkpoint_epoch, techs, path_prefix, path_suffix):
+def train(generator, discriminator, batch_size, source_tech, target_tech, num_epochs, g_learning_rate,
+          d_learning_rate, checkpoint_epoch, techs, path_prefix, path_suffix):
     # Define optimisers for Discriminator and Generator
-    d_optimizer = optim.Adam(discriminator.parameters(), lr=learning_rate, betas=(0.5, 0.999))
-    g_optimizer = optim.Adam(generator.parameters(), lr=learning_rate, betas=(0.5, 0.999))
+    d_optimizer = optim.Adam(discriminator.parameters(), lr=d_learning_rate, betas=(0.5, 0.999))
+    g_optimizer = optim.Adam(generator.parameters(), lr=g_learning_rate, betas=(0.5, 0.999))
     D_Losses = []
     G_Losses = []
     torch.set_num_threads(2)
