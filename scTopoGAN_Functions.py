@@ -168,7 +168,7 @@ def get_AE_Embeddings(Manifold_Data, batch_size, model_type, AE_arch, initial_LR
 
 def run_scTopoGAN(source_tech, target_tech, source_tech_name, target_tech_name, batch_size, 
                   topology_batch_size, total_epochs, num_iterations, checkpoint_epoch, 
-                  learning_rate, path_prefix):
+                  g_learning_rate, d_learning_rate, path_prefix):
     epochs = [500, 600, 700, 800, 900, 1000]
     core_suffix = "TopoGAN_Generation01"
     isExist = os.path.exists(path_prefix)
@@ -212,8 +212,8 @@ def run_scTopoGAN(source_tech, target_tech, source_tech_name, target_tech_name, 
         discriminator.train()
     
         trained_generator = train(generator, discriminator, batch_size, 
-                                source_tech, target_tech, total_epochs, learning_rate,
-                                checkpoint_epoch, techs, path_prefix, path_suffix)
+                                source_tech, target_tech, total_epochs, g_learning_rate,
+                                d_learning_rate, checkpoint_epoch, techs, path_prefix, path_suffix)
 
         Evaluation_Columns = ["Model", "Source", "Target", "Iteration", "Epoch",
                               "Source to Projected Topology Loss"]
@@ -321,8 +321,8 @@ def run_scTopoGAN(source_tech, target_tech, source_tech_name, target_tech_name, 
     print("=======================================================================")
 
     trained_generator = train(generator_1, discriminator, batch_size, 
-                                source_tech, target_tech, total_epochs, learning_rate,
-                                checkpoint_epoch, techs, path_prefix, path_suffix)
+                                source_tech, target_tech, total_epochs, g_learning_rate,
+                                d_learning_rate, checkpoint_epoch, techs, path_prefix, path_suffix)
     
     trained_generator.to("cpu")
     trained_generator.eval()
