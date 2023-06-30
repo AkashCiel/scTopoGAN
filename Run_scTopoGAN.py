@@ -19,6 +19,6 @@ source_latent = get_TopoAE_Embeddings(Manifold_Data = PBMC_ATAC, batch_size=50, 
 ## Step 2: Manifold alignment using scTopoGAN
 source_aligned = run_scTopoGAN(source_latent, target_latent, source_tech_name="ATAC", target_tech_name="RNA", 
                                batch_size=512, topology_batch_size=1000, total_epochs=1001, num_iterations=20, 
-                               checkpoint_epoch=100, learning_rate=1e-4, path_prefix="Results")
+                               checkpoint_epoch=100, g_learning_rate=1e-3, d_learning_rate=1e-2, path_prefix="Results")
 
 source_aligned.to_csv('ATAC_aligned.csv')
