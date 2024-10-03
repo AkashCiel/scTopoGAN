@@ -13,4 +13,4 @@ The following scripts can be used to reproduce the results obtained in the prepr
 2) The ```scTopoGAN_results.py``` script reproduce the alignment results of scTopoGAN using different datasets. 
 3) The ```UnionCom.py``` and ```manifold_align_mmd_pytorch.py``` scripts are used to apply UnionCom and MMD-MA, respectively. Both methods were used to benchmark the performance of scTopoGAN.
 
-For citation and further information please refer to: "scTopoGAN: Unsupervised manifold alignment of single-cell data", [bioRxiv](https://www.biorxiv.org/content/10.1101/2022.04.27.489829v3)
+For citation and further information please refer to: "scTopoGAN: Unsupervised manifold alignment of single-cell data", [Bioinformatics Advances](https://academic.oup.com/bioinformaticsadvances/article/3/1/vbad171/7450146)
